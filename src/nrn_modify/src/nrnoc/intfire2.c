@@ -230,7 +230,7 @@ extern void _cvode_abstol( Symbol**, double*, int);
  pnt_receive[_mechtype] = _net_receive;
  pnt_receive_size[_mechtype] = 1;
  	hoc_register_var(hoc_scdoub, hoc_vdoub, hoc_intfunc);
- 	ivoc_help("help ?1 IntFire2 /raid/zyc/code_for_dhs_paper/src/nrn_modify/src/nrnoc/intfire2.mod\n");
+ 	ivoc_help("help ?1 IntFire2 /home/ausar/DeepDendrite/src/nrn_modify/src/nrnoc/intfire2.mod\n");
  hoc_register_limits(_mechtype, _hoc_parm_limits);
  hoc_register_units(_mechtype, _hoc_parm_units);
  }
@@ -476,7 +476,7 @@ _first = 0;
 #endif
 
 #if NMODL_TEXT
-static const char* nmodl_filename = "/raid/zyc/code_for_dhs_paper/src/nrn_modify/src/nrnoc/intfire2.mod";
+static const char* nmodl_filename = "/home/ausar/DeepDendrite/src/nrn_modify/src/nrnoc/intfire2.mod";
 static const char* nmodl_file_text = 
   ": total current is ib + weighted events that decay with time constant taus\n"
   ": total current is integrated and when passes 1, then fire\n"

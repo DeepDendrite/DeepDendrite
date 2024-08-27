@@ -272,7 +272,7 @@ extern void _cvode_abstol( Symbol**, double*, int);
  	hoc_register_cvode(_mechtype, _ode_count, _ode_map, _ode_spec, _ode_matsol);
  	hoc_register_tolerance(_mechtype, _hoc_state_tol, &_atollist);
  	hoc_register_var(hoc_scdoub, hoc_vdoub, hoc_intfunc);
- 	ivoc_help("help ?1 hh /raid/zyc/code_for_dhs_paper/src/nrn_modify/src/nrnoc/hh.mod\n");
+ 	ivoc_help("help ?1 hh /home/ausar/DeepDendrite/src/nrn_modify/src/nrnoc/hh.mod\n");
  hoc_register_limits(_mechtype, _hoc_parm_limits);
  hoc_register_units(_mechtype, _hoc_parm_units);
  }
@@ -593,7 +593,7 @@ _first = 0;
 #endif
 
 #if NMODL_TEXT
-static const char* nmodl_filename = "/raid/zyc/code_for_dhs_paper/src/nrn_modify/src/nrnoc/hh.mod";
+static const char* nmodl_filename = "/home/ausar/DeepDendrite/src/nrn_modify/src/nrnoc/hh.mod";
 static const char* nmodl_file_text = 
   "TITLE hh.mod   squid sodium, potassium, and leak channels\n"
   " \n"

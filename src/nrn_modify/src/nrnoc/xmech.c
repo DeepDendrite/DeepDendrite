@@ -151,7 +151,7 @@ extern void _cvode_abstol( Symbol**, double*, int);
 #endif
   hoc_register_prop_size(_mechtype, 1, 0);
  	hoc_register_var(hoc_scdoub, hoc_vdoub, hoc_intfunc);
- 	ivoc_help("help ?1 Xmech /raid/zyc/code_for_dhs_paper/src/nrn_modify/src/nrnoc/xmech.mod\n");
+ 	ivoc_help("help ?1 Xmech /home/ausar/DeepDendrite/src/nrn_modify/src/nrnoc/xmech.mod\n");
  hoc_register_limits(_mechtype, _hoc_parm_limits);
  hoc_register_units(_mechtype, _hoc_parm_units);
  }
@@ -237,7 +237,7 @@ _first = 0;
 #endif
 
 #if NMODL_TEXT
-static const char* nmodl_filename = "/raid/zyc/code_for_dhs_paper/src/nrn_modify/src/nrnoc/xmech.mod";
+static const char* nmodl_filename = "/home/ausar/DeepDendrite/src/nrn_modify/src/nrnoc/xmech.mod";
 static const char* nmodl_file_text = 
   "NEURON{ SUFFIX Xmech}\n"
   "\n"

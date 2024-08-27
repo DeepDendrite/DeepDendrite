@@ -208,7 +208,7 @@ extern void _cvode_abstol( Symbol**, double*, int);
   hoc_register_dparam_semantics(_mechtype, 0, "area");
   hoc_register_dparam_semantics(_mechtype, 1, "pntproc");
  	hoc_register_var(hoc_scdoub, hoc_vdoub, hoc_intfunc);
- 	ivoc_help("help ?1 IClamp /raid/zyc/code_for_dhs_paper/src/nrn_modify/src/nrnoc/stim.mod\n");
+ 	ivoc_help("help ?1 IClamp /home/ausar/DeepDendrite/src/nrn_modify/src/nrnoc/stim.mod\n");
  hoc_register_limits(_mechtype, _hoc_parm_limits);
  hoc_register_units(_mechtype, _hoc_parm_units);
  }
@@ -376,7 +376,7 @@ _first = 0;
 #endif
 
 #if NMODL_TEXT
-static const char* nmodl_filename = "/raid/zyc/code_for_dhs_paper/src/nrn_modify/src/nrnoc/stim.mod";
+static const char* nmodl_filename = "/home/ausar/DeepDendrite/src/nrn_modify/src/nrnoc/stim.mod";
 static const char* nmodl_file_text = 
   "COMMENT\n"
   "Since this is an electrode current, positive values of i depolarize the cell\n"

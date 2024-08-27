@@ -1,5 +1,0 @@
-revsigmo.lo: revsigmo.c /usr/include/stdc-predef.h ../../nrnconf.h
-
-/usr/include/stdc-predef.h:
-
-../../nrnconf.h:

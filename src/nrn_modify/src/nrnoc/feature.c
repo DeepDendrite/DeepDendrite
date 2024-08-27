@@ -135,7 +135,7 @@ extern void _cvode_abstol( Symbol**, double*, int);
 	int _vectorized = 0;
   _initlists();
  	hoc_register_var(hoc_scdoub, hoc_vdoub, hoc_intfunc);
- 	ivoc_help("help ?1 feature /raid/zyc/code_for_dhs_paper/src/nrn_modify/src/nrnoc/feature.mod\n");
+ 	ivoc_help("help ?1 feature /home/ausar/DeepDendrite/src/nrn_modify/src/nrnoc/feature.mod\n");
  }
 static int _reset;
 static char *modelname = "";
