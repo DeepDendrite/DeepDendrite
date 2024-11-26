@@ -1,10 +1,13 @@
 # 基于 NVIDIA HPC SDK 的基础镜像
 ARG HPCSDK_VER="21.9"
 ARG CUDA_VER="11.4"
-FROM nvcr.io/nvidia/nvhpc:${HPCSDK_VER}-devel-cuda${CUDA_VER}-ubuntu20.04
+ARG UBUNTU_VER="20.04"
+FROM nvcr.io/nvidia/nvhpc:${HPCSDK_VER}-devel-cuda${CUDA_VER}-ubuntu${UBUNTU_VER}
+
+ENV CUDA_BIN_PATH="/opt/nvidia/hpc_sdk/Linux_x86_64/${HPCSDK_VERSION}/cuda"
 
 # 更新包列表并安装所需的软件包
-RUN apt-get update && apt-get upgrade -y && apt-get install -y --no-install-recommends \
+RUN DEBIAN_FRONTEND=noninteractive  apt-get update && apt-get upgrade -y && apt-get install -y  \
     build-essential \
     python-is-python3 \
     python3-distutils \
@@ -21,6 +24,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y --no-install-reco
     python3-progressbar \
     mpich \
     libmpich-dev \
+    lmod \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
