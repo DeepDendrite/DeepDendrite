@@ -1,5 +1,7 @@
 # 基于 NVIDIA HPC SDK 的基础镜像
-FROM nvcr.io/nvidia/nvhpc:24.7-devel-cuda_multi-ubuntu22.04
+ARG HPCSDK_VER="21.9"
+ARG CUDA_VER="11.4"
+FROM nvcr.io/nvidia/nvhpc:${HPCSDK_VER}-devel-cuda${CUDA_VER}-ubuntu20.04
 
 # 更新包列表并安装所需的软件包
 RUN apt-get update && apt-get upgrade -y && apt-get install -y --no-install-recommends \
@@ -11,14 +13,14 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y --no-install-reco
     libncurses5-dev \
     libncursesw5-dev \
     libreadline-dev \
-    openmpi-bin \
-    libopenmpi-dev \
     bison \
     pkg-config \
     flex \
     python3-numpy \
     python3-matplotlib \
     python3-progressbar \
+    mpich \
+    libmpich-dev \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
