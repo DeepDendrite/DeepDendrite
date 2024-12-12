@@ -1,6 +1,6 @@
 # 基于 NVIDIA HPC SDK 的基础镜像
 ARG HPCSDK_VER="21.9"
-ARG CUDA_VER="11.4"
+ARG CUDA_VER="_multi"
 ARG UBUNTU_VER="20.04"
 FROM nvcr.io/nvidia/nvhpc:${HPCSDK_VER}-devel-cuda${CUDA_VER}-ubuntu${UBUNTU_VER}
 
@@ -34,6 +34,8 @@ RUN passwd -d root
 # 设置工作目录
 WORKDIR /workdir
 
+#禁止检测CUDA
+ENV CUDA_VISIBLE_DEVICES=99
 ENV HOME=/workdir
 
 SHELL ["/bin/bash", "-c"]
